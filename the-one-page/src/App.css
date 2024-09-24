@@ -1,0 +1,294 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  background-color: rgb(20,20,20);
+}
+
+@font-face {
+  font-family: theOneFont;
+  src: url(./data/RingbearerMedium-51mgZ.ttf);
+}
+
+.app-container {
+  display: flex;
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 70px;
+  background-color: transparent;
+}
+
+.searchbar {
+  outline:none;
+  width: 400px;
+  height: 40px;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  border: none;
+  text-indent: 10px;
+  background-color: rgb(20,20,20);
+  opacity: 0.9;
+  
+}
+
+.navbar-logo {
+  z-index: 1;
+  font-family: theOneFont;
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: -1px 0 rgb(205, 165, 0), 0 1px rgb(205, 165, 0), 1px 0 rgb(205, 165, 0), 0 -1px rgb(205, 165, 0);
+}
+
+
+.sidebar-background {
+  z-index: 1;
+  flex: 1.15;
+  background-image: linear-gradient(to left, rgba(0,0,0,0.8) 90%, transparent);
+  justify-self: end;
+  animation-name: sidebar-panel-1;
+  animation-timing-function: cubic-bezier(.19,1.19,.8,.98);
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.sidebar-container {
+  background-image: url('./img/parchment-paper.jpg');
+  background-size: cover;
+  border-radius: 100px;
+  margin: 50px;
+  margin-left: 10px;
+  width: 33vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-close {
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+  margin-left: 95%;
+  background-size: contain;
+  position: absolute;
+  z-index: 15;
+}
+
+.sidebar-paragraph {
+  margin-top: 15%;
+  font-family: theOneFont;
+  color: black;
+  width: 80%;
+  height: 80%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-image {
+  justify-self: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar-paragraph::-webkit-scrollbar {
+  color: red;
+  background-color: rgba(20,20,20,0.9);
+  width: 10px;
+}
+
+.sidebar-paragraph::-webkit-scrollbar-thumb {
+  color: red;
+  background-color: rgb(80,80,80);
+}
+
+.eye-logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.eye-logo {
+  background-color: orange;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: eye-float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  box-shadow: -5px 5px 5px rgba(65, 41, 4, 0.5), 5px 5px 5px rgba(65, 41, 4, 0.5), 5px -5px 5px rgba(65, 41, 4, 0.5), -5px -5px 5px rgba(65, 41, 4, 0.5);
+  justify-self: center;
+  position: absolute;
+  z-index: 10;
+}
+
+.eye-pupil{
+  background-color: black;
+  width: 7px;
+  height: 20px;
+  border-radius: 50%;
+  animation-name: pupil-float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.eye-fork {
+  background-color: black;
+  width: 80px;
+  height: 70px;
+  transform: translate(0, 20px);
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+
+}
+
+.eye-fork-blocker {
+  background-image: url('./img/parchment-paper.jpg');
+  background-position: center;
+  height: 90px;
+  width:70px;
+  border-radius: 50%;
+  transform: translate(0, -10px);
+  z-index: 5;
+  position: absolute;
+}
+
+.eye-fork-blocker-border {
+  background-image: radial-gradient(orange, transparent);
+  background-position: center;
+  height: 90px;
+  width:75px;
+  border-radius: 50%;
+  z-index: 4;
+  position: absolute;
+  animation-name: eye-float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+
+#map {
+  transform: translate(0px, 0px);
+  position: absolute;
+}
+
+.map-image {
+  position: absolute;
+  width: 1200px;
+  height: 842.553px;
+}
+
+.landmark {
+  width: 0;
+  height: 0;
+  border-top: 8px solid rgba(20, 20, 20, 0.9);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+  
+.landmark > a {
+  color: rgb(0, 0, 0);
+  font-size: 0.5rem;
+  font-family: TheOneFont;
+  z-index: 20;
+}
+
+.landmark > a:visited {
+  color: rgb(0, 0, 0);
+  font-size: 0.5rem;
+  font-family: TheOneFont;
+}
+
+.landmark > a:link {
+  color: rgb(0, 0, 0);
+  font-size: 0.5rem;
+  font-family: TheOneFont;
+}
+
+.landmark:hover {  
+  z-index: 10000;
+}
+
+.landmark:hover > a {
+  color: white;
+  animation-name: landmark-expand;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  z-index: 10000;
+  display: inline;
+}
+
+
+
+@keyframes sidebar-panel-1 {
+  0% {
+    transform: translate(1000px,0px);
+  }
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes sidebar-panel-2 { 
+  0% {
+    transform: translate(0px,0px);
+  }
+  100% {
+    transform: translate(1000px,0px);
+  }
+}
+
+@keyframes landmark-expand {
+  100% {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes eye-float {
+  0% {
+    transform:translate(0, -2px)
+  }
+  50%{
+    transform:translate(0, 2px)
+  }
+  100%{
+    transform:translate(0, -2px)
+  }
+}
+
+@keyframes pupil-float {
+  0% {
+    width: 7px;
+    height: 20px;
+  }
+  50% {
+    width: 6.5px;
+    height: 18px;
+  }
+  100% {
+    width: 7px;
+    height:20px;
+  }
+}

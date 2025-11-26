@@ -35,7 +35,7 @@ body {
   border-radius: 100px;
   border: none;
   text-indent: 10px;
-  background-color: rgb(20,20,20);
+  background-color: rgba(15,5,0,0.9);
   opacity: 0.9;
   
 }
@@ -44,16 +44,16 @@ body {
   z-index: 1;
   font-family: theOneFont;
   font-size: 3rem;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bold;
-  text-shadow: -1px 0 rgb(205, 165, 0), 0 1px rgb(205, 165, 0), 1px 0 rgb(205, 165, 0), 0 -1px rgb(205, 165, 0);
+  text-shadow: -2px 0 rgb(205, 165, 0), 0 1px rgb(205, 165, 0), 1px 0 rgb(205, 165, 0), 0 -1px rgb(205, 165, 0);
 }
 
 
 .sidebar-background {
   z-index: 1;
   flex: 1.15;
-  background-image: linear-gradient(to left, rgba(0,0,0,0.8) 90%, transparent);
+  background-image: linear-gradient(to left, black 30%, rgba(30,10,0,0.8) 85%, transparent);
   justify-self: end;
   animation-name: sidebar-panel-1;
   animation-timing-function: cubic-bezier(.19,1.19,.8,.98);
@@ -63,9 +63,8 @@ body {
 }
 
 .sidebar-container {
-  background-image: url('./img/parchment-paper.jpg');
-  background-size: cover;
-  border-radius: 100px;
+  background-image: url('./img/parchment-paper.png');
+  background-size: 100% 100%;
   margin: 50px;
   margin-left: 10px;
   width: 33vw;
@@ -73,7 +72,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  }
 
 .sidebar-close {
   width: 30px;

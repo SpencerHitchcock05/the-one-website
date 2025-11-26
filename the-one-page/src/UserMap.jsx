@@ -36,21 +36,6 @@ export default function UserMap(props) {
         } 
         
         
-        //setCurrCoord([props.coord[0], props.coord[1]]);
-        /*
-        console.log(landmarkData.hasOwnProperty(props.query));
-        if (landmarkData.hasOwnProperty(props.query) && props.query) {
-            setScale(2);
-            console.log((landmarkData[props.query].x * -2) + (window.innerWidth / 3), (landmarkData[props.query].y * -2) + window.innerHeight / 2 )
-            setCurrCoord((landmarkData[props.query].x * -2) + (window.innerWidth / 3), (landmarkData[props.query].y * -2) + window.innerHeight / 2 )
-            
-        }
-        */
-
-        //ref.current.style.transform = `translate(${props.coord[0]}px, ${props.coord[1]}px) scale(${2})`;
-        
-        
-        
     }, [props])
 
     useEffect(() => {
@@ -60,15 +45,9 @@ export default function UserMap(props) {
     function handleMouseDown(e) {
         setClicking(true);
         setTempCoord(prev => {return [e.clientX, e.clientY]})
-        /*
-        for (let i = 0; i < 2; i++) {
-            handleWheel({clientX: window.innerWidth / 3, clientY: window.innerHeight / 2, deltaY: -125})
-        }
-        */
     }
 
     function handleMouseMove(e) {
-        //console.log(e.clientX);
         if (clicking) {
             let tempX = currCoord[0] + e.clientX - tempCoord[0];
             let tempY = currCoord[1] + e.clientY - tempCoord[1];

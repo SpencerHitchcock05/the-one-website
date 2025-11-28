@@ -208,21 +208,25 @@ body {
 }
   
 .landmark > a {
-  color: rgb(0, 0, 0);
-  font-size: 0.5rem;
+  color: black;
+  text-shadow: -2px 0 rgb(205, 165, 0), 0 1px rgb(205, 165, 0), 1px 0 rgb(205, 165, 0), 0 -1px rgb(205, 165, 0);
+  font-size: 0.7rem;
   font-family: TheOneFont;
+  white-space: nowrap;
   z-index: 20;
 }
 
 .landmark > a:visited {
-  color: rgb(0, 0, 0);
-  font-size: 0.5rem;
+  color: black;
+  text-shadow: -2px 0 rgb(205, 165, 0), 0 1px rgb(205, 165, 0), 1px 0 rgb(205, 165, 0), 0 -1px rgb(205, 165, 0);
+  font-size: 0.7rem;
   font-family: TheOneFont;
 }
 
 .landmark > a:link {
-  color: rgb(0, 0, 0);
-  font-size: 0.5rem;
+  color: black;
+  text-shadow: -2px 0 rgb(205, 165, 0), 0 1px rgb(205, 165, 0), 1px 0 rgb(205, 165, 0), 0 -1px rgb(205, 165, 0);
+  font-size: 0.7rem;
   font-family: TheOneFont;
 }
 
@@ -231,6 +235,15 @@ body {
 }
 
 .landmark:hover > a {
+  color: white;
+  animation-name: landmark-expand;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  z-index: 10000;
+  display: inline;
+}
+
+.landmark > a:hover {
   color: white;
   animation-name: landmark-expand;
   animation-duration: 0.1s;
@@ -261,7 +274,7 @@ body {
 
 @keyframes landmark-expand {
   100% {
-    font-size: 0.8rem;
+    font-size: 1.0rem;
   }
 }
 
